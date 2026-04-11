@@ -26,54 +26,78 @@ public class Reserva extends Auditable {
     @Column(name = "estado", nullable = false, length = 20)
     private String estado;
 
-    public Reserva() {
-    }
+    @Transient
+    private String nombreUsuario;
+    
+    @Transient
+    private String tituloLibro;
 
-    public Reserva(Integer idReserva, Integer idUsuario, Integer idLibro, LocalDate fechaReserva, String estado) {
-        this.idReserva = idReserva;
-        this.idUsuario = idUsuario;
-        this.idLibro = idLibro;
-        this.fechaReserva = fechaReserva;
-        this.estado = estado;
-    }
+    public Reserva() {}
 
-    public Integer getIdReserva() {
-        return idReserva;
-    }
+	public Reserva(Integer idReserva, Integer idUsuario, Integer idLibro, LocalDate fechaReserva, String estado,
+			String nombreUsuario, String tituloLibro) {
+		this.idReserva = idReserva;
+		this.idUsuario = idUsuario;
+		this.idLibro = idLibro;
+		this.fechaReserva = fechaReserva;
+		this.estado = estado;
+		this.nombreUsuario = nombreUsuario;
+		this.tituloLibro = tituloLibro;
+	}
 
-    public void setIdReserva(Integer idReserva) {
-        this.idReserva = idReserva;
-    }
+	public Integer getIdReserva() {
+		return idReserva;
+	}
 
-    public Integer getIdUsuario() {
-        return idUsuario;
-    }
+	public void setIdReserva(Integer idReserva) {
+		this.idReserva = idReserva;
+	}
 
-    public void setIdUsuario(Integer idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+	public Integer getIdUsuario() {
+		return idUsuario;
+	}
 
-    public Integer getIdLibro() {
-        return idLibro;
-    }
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 
-    public void setIdLibro(Integer idLibro) {
-        this.idLibro = idLibro;
-    }
+	public Integer getIdLibro() {
+		return idLibro;
+	}
 
-    public LocalDate getFechaReserva() {
-        return fechaReserva;
-    }
+	public void setIdLibro(Integer idLibro) {
+		this.idLibro = idLibro;
+	}
 
-    public void setFechaReserva(LocalDate fechaReserva) {
-        this.fechaReserva = fechaReserva;
-    }
+	public LocalDate getFechaReserva() {
+		return fechaReserva;
+	}
 
-    public String getEstado() {
-        return estado;
-    }
+	public void setFechaReserva(LocalDate fechaReserva) {
+		this.fechaReserva = fechaReserva;
+	}
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
+
+	public String getTituloLibro() {
+		return tituloLibro;
+	}
+
+	public void setTituloLibro(String tituloLibro) {
+		this.tituloLibro = tituloLibro;
+	}
 }

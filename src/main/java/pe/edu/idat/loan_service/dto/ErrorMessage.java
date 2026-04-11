@@ -3,14 +3,12 @@ package pe.edu.idat.loan_service.dto;
 import java.time.LocalDate;
 
 public class ErrorMessage {
-
     private Integer statusCode;
     private LocalDate dateError;
     private String message;
     private String description;
 
-    public ErrorMessage() {
-    }
+    public ErrorMessage() {}
 
     public ErrorMessage(Integer statusCode, LocalDate dateError, String message, String description) {
         this.statusCode = statusCode;
