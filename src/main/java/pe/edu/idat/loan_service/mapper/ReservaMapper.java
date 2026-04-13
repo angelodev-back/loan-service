@@ -10,9 +10,10 @@ import pe.edu.idat.loan_service.entity.Reserva;
 import java.util.List;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
+
 public interface ReservaMapper {
 
-    @Mapping(target = "idReserva", ignore = true)
+	@Mapping(target = "idReserva", ignore = true)
     @Mapping(target = "fechaReserva", ignore = true)
     @Mapping(target = "estado", ignore = true)
     @Mapping(target = "createdBy", ignore = true)

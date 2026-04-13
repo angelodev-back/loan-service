@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface PrestamoMapper {
 
-    @Mapping(target = "idPrestamo", ignore = true)
+	@Mapping(target = "idPrestamo", ignore = true)
     @Mapping(target = "fechaPrestamo", ignore = true)
     @Mapping(target = "fechaLimite", ignore = true)
     @Mapping(target = "fechaDevolucion", ignore = true)
